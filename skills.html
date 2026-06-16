@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Skills</title>
+
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        Portfolio<span>.</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html" class="active">Skills</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+<!-- Certifications Section -->
+
+<!-- Certificates Section -->
+
+<section class="certificates" id="certificates">
+
+    <h2 class="heading">My <span>Certificates</span></h2>
+
+    <div class="certificate-container">
+
+        <div class="certificate-card" onclick="openModal(
+        'PM.jpg',
+        'Foundations of Project Management',
+        'Completed through the Center for Open & Distance Learning (CODL), University of Moratuwa. Covered project management fundamentals, planning, and project lifecycle concepts.')">
+
+            <img src="PM.jpg" alt="Foundation PM">
+            <h3>Foundations of Project Management</h3>
+
+        </div>
+
+        <div class="certificate-card" onclick="openModal(
+        'ProjectScop.jpg',
+        'Project Scope and Schedule Management',
+        'Completed through the University of Moratuwa. Focused on scope planning, scheduling techniques, and project timelines.')">
+
+            <img src="ProjectScop.jpg" alt="Scope & Schedule">
+            <h3>Project Scope & Schedule Management</h3>
+
+        </div>
+
+        <div class="certificate-card" onclick="openModal(
+        'BA.jpg',
+        'Learning AI for Business Analysis',
+        'Completed via LinkedIn Learning. Covered AI fundamentals, business analysis techniques, and AI-driven decision making.')">
+
+            <img src="BA.jpg" alt="AI Certificate">
+            <h3>AI for Business Analysis</h3>
+
+        </div>
+        
+        <div class="certificate-card" onclick="openModal(
+        'PowerBI.jpg',
+        'Learning Power BI Desktop',
+        'Gained practical experience in Microsoft Power BI, data analysis, and visualization through the Learning Power BI Desktop course on LinkedIn Learning..')">
+
+            <img src="PowerBI.jpg" alt="AI Certificate">
+            <h3>Learning Power BI Desktop</h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Modal -->
+
+<div id="certificateModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <img id="modalImage" src="" alt="" class="modal-img">
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalDescription"></p>
+
+    </div>
+
+</div>
+<script>
+
+function openModal(image, title, description){
+
+    document.getElementById("modalImage").src = image;
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalDescription").innerText = description;
+
+    document.getElementById("certificateModal").style.display = "block";
+}
+
+function closeModal(){
+
+    document.getElementById("certificateModal").style.display = "none";
+}
+
+window.onclick = function(event){
+
+    let modal = document.getElementById("certificateModal");
+
+    if(event.target == modal){
+        modal.style.display = "none";
+    }
+}
+
+</script>
+<section class="skills" id="skills">
+
+    <h2 class="heading">My <span> Tecnical Skills</span></h2>
+
+    <div class="skills-container">
+
+        <div class="skill-box">
+            <i class='bx bx-line-chart'></i>
+            <h3>Business Analysis</h3>
+            <p>Requirements gathering, process analysis, and documentation.</p>
+        </div>
+
+        <div class="skill-box">
+            <i class='bx bx-task'></i>
+            <h3>Project Management</h3>
+            <p>Project planning, scheduling, risk management, and coordination.</p>
+        </div>
+
+        <div class="skill-box">
+            <i class='bx bx-data'></i>
+            <h3>Database Management</h3>
+            <p>MySQL, SQL queries, database design, and data management.</p>
+        </div>
+
+        <div class="skill-box">
+            <i class='bx bx-bar-chart-alt-2'></i>
+            <h3>Design & UI/UX</h3>
+            <p>Designed wireframes, prototypes, and responsive user interfaces using Figma.</p>
+        </div>
+
+        <div class="skill-box">
+            <i class='bx bx-code-alt'></i>
+            <h3>Web Development</h3>
+            <p>HTML, CSS, JavaScript, and responsive web design.</p>
+        </div>
+    </div>
+
+</section>
+</body>
+</html>
